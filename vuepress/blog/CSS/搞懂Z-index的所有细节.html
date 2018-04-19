@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Brown Hu | 搞懂Z-index的所有细节</title>
+    <meta name="description" content="Replace the stars and rivers in the body with unlimited methods for the future.">
+  <link rel="icon" href="/logo.png">
+    
+    <link rel="preload" href="/assets/css/26.styles.d5059f7e.css" as="style"><link rel="preload" href="/assets/js/app.b60e6d60.js" as="script"><link rel="preload" href="/assets/js/18.2f2d5fe1.js" as="script"><link rel="prefetch" href="/assets/js/14.7c9c1db3.js"><link rel="prefetch" href="/assets/js/1.7f926fc1.js"><link rel="prefetch" href="/assets/js/2.c30964e6.js"><link rel="prefetch" href="/assets/js/3.963db0c8.js"><link rel="prefetch" href="/assets/js/4.39de6c92.js"><link rel="prefetch" href="/assets/js/5.619e46ab.js"><link rel="prefetch" href="/assets/js/6.f8e2d45a.js"><link rel="prefetch" href="/assets/js/7.09f7636b.js"><link rel="prefetch" href="/assets/js/8.e8fa6285.js"><link rel="prefetch" href="/assets/js/9.23052600.js"><link rel="prefetch" href="/assets/js/10.950f52b8.js"><link rel="prefetch" href="/assets/js/11.ee7db876.js"><link rel="prefetch" href="/assets/js/12.c05afcf7.js"><link rel="prefetch" href="/assets/js/13.bb5c22da.js"><link rel="prefetch" href="/assets/js/0.f3e7ff7b.js"><link rel="prefetch" href="/assets/js/15.3ec96ef8.js"><link rel="prefetch" href="/assets/js/16.4e73b28b.js"><link rel="prefetch" href="/assets/js/17.7077a04c.js"><link rel="prefetch" href="/assets/js/19.0bfd4105.js"><link rel="prefetch" href="/assets/js/20.d311ba5e.js"><link rel="prefetch" href="/assets/js/21.b40949db.js"><link rel="prefetch" href="/assets/js/22.cae15c6a.js"><link rel="prefetch" href="/assets/js/23.1e559605.js"><link rel="prefetch" href="/assets/js/24.b8358bde.js"><link rel="prefetch" href="/assets/js/25.3bf16c8a.js"><link rel="prefetch" href="/assets/js/27.44c923dc.js">
+    <link rel="stylesheet" href="/assets/css/26.styles.d5059f7e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="router-link-active"><!----><span class="site-name">
+      Brown Hu
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><a href="/blog/" class="router-link-active">
+      Blog
+    </a><a href="/config/">
+      Project
+    </a><a href="/default-theme-config/">
+      Resume
+    </a><a href="https://github.com/hubingliang" target="_blank" rel="noopener" class="github-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header><div class="sidebar"><nav class="nav-links"><a href="/blog/" class="router-link-active">
+      Blog
+    </a><a href="/config/">
+      Project
+    </a><a href="/default-theme-config/">
+      Resume
+    </a><a href="https://github.com/hubingliang" target="_blank" rel="noopener" class="github-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav><ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>JavaScript</span><span class="arrow down"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>CSS</span><span class="arrow up"></span></p><ul class="sidebar-group-items"><li><a href="/blog/CSS/2周时间掌握47个CSS技巧.html" class="sidebar-link">2周时间掌握47个CSS技巧</a></li><li><a href="/blog/CSS/CSS清除浮动的三种方法.html" class="sidebar-link">CSS清除浮动的三种方法</a></li><li><a href="/blog/CSS/rem方案完美解决自适应.html" class="sidebar-link">rem方案完美解决自适应</a></li><li><a href="/blog/CSS/搞懂Z-index的所有细节.html" class="active sidebar-link">搞懂Z-index的所有细节</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/CSS/搞懂Z-index的所有细节.html#z-index-在什么情况下才生效？" class="sidebar-link">z-index 在什么情况下才生效？</a></li><li class="sidebar-sub-header"><a href="/blog/CSS/搞懂Z-index的所有细节.html#z-index值越大元素越靠前，对吗？" class="sidebar-link">z-index值越大元素越靠前，对吗？</a></li><li class="sidebar-sub-header"><a href="/blog/CSS/搞懂Z-index的所有细节.html#总结" class="sidebar-link">总结</a></li><li class="sidebar-sub-header"><a href="/blog/CSS/搞懂Z-index的所有细节.html#z-index不设置和设置为0有什么区别" class="sidebar-link">z-index不设置和设置为0有什么区别?</a></li></ul></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>HTTP</span><span class="arrow down"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Library</span><span class="arrow down"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Other</span><span class="arrow down"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Wheel</span><span class="arrow down"></span></p><!----></div></li></ul></div><div class="page"><div class="content"><h1 id="搞懂z-index的所有细节"><a href="#搞懂z-index的所有细节" aria-hidden="true" class="header-anchor">#</a> 搞懂Z-index的所有细节</h1><p><img src="http://upload-images.jianshu.io/upload_images/4337988-72fc3279283f3d96.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="用Z-index来改变堆叠顺序"></p><p><a href="http://www.cssmojo.com/extras/everything_you_always_wanted_to_know_about_z-index_but_were_afraid_to_ask/" target="_blank" rel="noopener noreferrer">Z-index测试网站</a></p><h2 id="z-index-在什么情况下才生效？"><a href="#z-index-在什么情况下才生效？" aria-hidden="true" class="header-anchor">#</a> z-index 在什么情况下才生效？</h2><p>Z-index的运用是需要条件的,与其相关的属性就是position属性。我们以三个div来举例子。</p><h3 id="position-static"><a href="#position-static" aria-hidden="true" class="header-anchor">#</a> position: static;</h3><p>当三个div的position都为static时,我们把div(A)的Z-index设置为15, 把div(B)的Z-index设置为10,把div©的Z-index设置为5。
+<img src="http://upload-images.jianshu.io/upload_images/4337988-dc45d7a26386344b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><strong>发现div(B)依然把div(A)的一部分挡住了,所以当position为static时,Z-index起不到任何改变堆叠的作用。</strong></p><h3 id="position-relative-absolute-fixed"><a href="#position-relative-absolute-fixed" aria-hidden="true" class="header-anchor">#</a> position: relative/absolute/fixed;</h3><p>当三个div的position都为relative/absolute/fixed时,发现Z-index生效。
+<img src="http://upload-images.jianshu.io/upload_images/4337988-b3b78915180bd5e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><strong>总结: 只有position的值为relative/absolute/fixed中的一个,Z-index才会生效。</strong></p><h2 id="z-index值越大元素越靠前，对吗？"><a href="#z-index值越大元素越靠前，对吗？" aria-hidden="true" class="header-anchor">#</a> z-index值越大元素越靠前，对吗？</h2><p>我们现在div(A)和div(B)中再分别创建一个小的div©和div(d),
+<img src="http://upload-images.jianshu.io/upload_images/4337988-8330fa3e640fe19e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="这一张图就是一个特例">
+我们观察到,div(a)的Z-index为20 可是为什么还会被Z-index仅仅为10的div(B)遮挡住呢?
+难道是因为Z-index继承给他的子元素了吗?不Z-index可是不继承给它的子元素的。
+我们试试把biv(A)的Z-index设置成auto,
+<img src="http://upload-images.jianshu.io/upload_images/4337988-e92ccbadb3ad1561.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt>
+div(a)成功的遮挡住了Z-index比他小的元素。</p><p>再试试只把div(a)设置为auto
+<img src="http://upload-images.jianshu.io/upload_images/4337988-e4724db7e354c034.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p><h2 id="总结"><a href="#总结" aria-hidden="true" class="header-anchor">#</a> 总结</h2><ul><li>当Z-index的值设置为auto时,不建立新的堆叠上下文,当前堆叠上下文中生成的div的堆叠级别与其父项的框相同。</li><li>当Z-index的值设置为一个整数时,该整数是当前堆叠上下文中生成的div的堆栈级别。该框还建立了其堆栈级别的本地堆叠上下文。这意味着后代的z-index不与此元素之外的元素的z-index进行比较。</li></ul><p><strong>ps: 通俗讲就是,当一个div的Z-index为整数时,它的子元素和外界元素进行比较时,采用父元素的Z-index进行比较, 和兄弟元素比较采用自身的Z-index。当一个div的Z-index为auto时,如果它和它的兄弟进行比较,采用它父元素的Z-index。</strong></p><h2 id="z-index不设置和设置为0有什么区别"><a href="#z-index不设置和设置为0有什么区别" aria-hidden="true" class="header-anchor">#</a> z-index不设置和设置为0有什么区别?</h2><p>如果不设置Z-index那么默认值为auto,则不建立层叠上下文。设置为0则会脱离文档流,建立层叠上下文。</p><p><img src="http://upload-images.jianshu.io/upload_images/4337988-da32ea3f63d9b3c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="文档流Z轴"></p></div><!----><div class="content page-nav"><p class="inner"><span class="prev">
+        ← <a href="/blog/CSS/rem方案完美解决自适应.html" class="prev">
+          rem方案完美解决自适应
+        </a></span><span class="next"><a href="/blog/HTTP/认识HTTP-Cookie和Session篇.html">
+          认识HTTP----Cookie和Session篇
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/assets/js/18.2f2d5fe1.js" defer></script><script src="/assets/js/app.b60e6d60.js" defer></script>
+  </body>
+</html>
