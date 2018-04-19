@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[27],{69:function(o,n){console.log(document.querySelector("h1"))}}]);
